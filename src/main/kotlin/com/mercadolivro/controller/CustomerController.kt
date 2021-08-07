@@ -37,7 +37,7 @@ class CustomerController(
         customerService.update(customer.toCustomerModel(customerSaved))
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun delete(@PathVariable id: Int) {
         customerService.delete(id)
